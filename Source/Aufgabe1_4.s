@@ -3,8 +3,8 @@
  *
  * SoSe 2024
  *
- *  Created on: <$Date>
- *      Author: <$Name>
+ *  Created on: 17.10.2024
+ *      Author: Rudi Peusquens
  *
  *	Aufgabe : Maskenoperationen
  */
@@ -22,7 +22,6 @@ main:
   /* Ergebnisregister */
   mov r4, #0
   mov r5, #0
-  mov r6, #0
 
 
    /* Rechnung */
@@ -30,7 +29,8 @@ main:
 
   adcs r5, r1, r3
 
-  adccs r6, r6, #0
+  movcc r6, #0
+  movcs r6, #1
 
 
 

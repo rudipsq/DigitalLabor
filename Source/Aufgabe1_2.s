@@ -3,8 +3,8 @@
  *
  * SoSe 2024
  *
- *  Created on: <$Date>
- *      Author: <$Name>
+ *  Created on: 17.10.2024
+ *      Author: Rudi Peusquens
  *
  *	Aufgabe : Addition von Zahlen
  */
@@ -19,7 +19,7 @@ main:
 
 
   /* b */
-   mov r0,#0xffffffff
+   mov r0,#-1
    mov r1,#1
    add r11,r0,r1
 
@@ -29,13 +29,11 @@ main:
 
 
    /* c */
-   mov r0,#2147483648
-   mov r1,#2147483648
-   add r11,r0,r1
+   mov r0,#(1<<31)
+   add r11,r0,r0
 
    mov r0,#0x80000000
-   mov r1,#0x80000000
-   add r11,r0,r1
+   add r11,r0,r0
 
 
 stop:
