@@ -3,8 +3,8 @@
  *
  * SoSe 2024
  *
- *  Created on: <$Date>
- *      Author: <$Name>
+ *  Created on: <10.11.2024>
+ *      Author: <Rudi Peusquens>
  *
  *	Aufgabe : 64 Bit Addition
  */
@@ -14,7 +14,7 @@
 main:
 
 
-/* Define bit masks for individual items */
+/* individual items */
 .equ BREAD_bm,      (1 << 0)
 .equ BUTTER_bm,     (1 << 1)
 .equ JAM_bm,        (1 << 2)
@@ -33,19 +33,17 @@ main:
 .equ PEANUT_bm,     (1 << 25)
 .equ CHESTNUTS_bm,  (1 << 26)
 
-/* Define category masks */
+/* category masks */
 .equ BREAKFAST_ITEMS_bm, (BREAD_bm | BUTTER_bm | JAM_bm)
 .equ DRINKS_bm,          (WATER_bm | MILK_bm | RUM_bm | VINE_bm | TEA_bm)
 .equ FRUITS_bm,          (APPLE_bm | MANGO_bm | LEMON_bm)
 .equ NUTS_bm,            (ALMOND_bm | PEANUT_bm | CHESTNUTS_bm)
 
-/* Define breakfast mask */
+/* breakfast mask */
 .equ BREAKFAST_bm, (BREAD_bm | BUTTER_bm | JAM_bm | MILK_bm | PEANUT_bm | LEMON_bm)
 
 
 
-
-    
     ldr r0, =BREAKFAST_bm
 
     
@@ -64,7 +62,9 @@ main:
 
     
     ldr r4, =BREAKFAST_bm
-    bic r4, r4, #(BUTTER_bm | MILK_bm)
+    // bic r4, r4, #(BUTTER_bm | MILK_bm)
+    bic r4, r4, #BUTTER_bm 
+    bic r4, r4, #MILK_bm
     orr r4, r4, #TEA_bm
 
 

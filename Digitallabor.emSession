@@ -75,8 +75,6 @@
  </Memory4>
  <Project>
   <ProjectSessionItem path="Digitallabor"/>
-  <ProjectSessionItem path="Digitallabor;Aufgabe1"/>
-  <ProjectSessionItem path="Digitallabor;Aufgabe1;Source"/>
   <ProjectSessionItem path="Digitallabor;Aufgabe2"/>
   <ProjectSessionItem path="Digitallabor;Aufgabe2;Source"/>
   <ProjectSessionItem path="Digitallabor;Aufgabe8"/>
@@ -159,10 +157,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="26" y="5" useTextEdit="1" path="Source/Aufgabe1_1.s" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="6" useTextEdit="1" path="Source/Aufgabe1_2.s" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="13" y="22" useTextEdit="1" path="Source/Aufgabe1_3.s" left="0" selected="1" top="10" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="5" useTextEdit="1" path="Source/Aufgabe1_4.s" left="0" top="2" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="66" useTextEdit="1" path="Source/Aufgabe2_1.s" left="0" selected="1" top="34" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="Aufgabe1" fileDialogDefaultFilter="*.asm;*.s;*.inc" autoConnectTarget="Simulator" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/hs/dtl/Workspace_DTL/Source" debugSearchPath="" autoConnectCapabilities="4415"/>
+ <EMStudioWindow activeProject="Aufgabe2" fileDialogDefaultFilter="*.asm;*.s;*.inc" autoConnectTarget="Simulator" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/hs/dtl/Workspace_DTL/Source" debugSearchPath="" autoConnectCapabilities="4415"/>
 </session>

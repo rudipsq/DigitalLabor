@@ -3,15 +3,58 @@
  *
  * SoSe 2024
  *
- *  Created on: <$Date>
- *      Author: <$Name>
+ *  Created on: <10.11.2024>
+ *      Author: <Rudi Peusquens>
  *
  *	Aufgabe : Werte Binarisieren
  */
 .text /* Specify that code goes in text segment */
 .code 32 /* Select ARM instruction set */
 .global main /* Specify global symbol */
+
+
+numbers:
+    .word 0
+    .word 1
+    .word 10
+    .word 100
+    .word 2
+    .word 4
+    .word 8
+    .word 16
+
 main:
+
+
+mov r0, #0 //Ausgaberegister
+mov r1, #8 // Datenmenge
+ldr r2,=numbers // Datenzeiger
+
+while:
+    // Register nach links (um ein Nibble) verschieben
+    mov r0, r0, lsl#4
+    
+    // Wert aus dem Speicher laden, Datenzeiger auf die nächste Adresse verschieben
+    ldr r3, [r2], #4
+
+    // Wert < Stufenwert
+    cmp r3, #10
+    movlt r3, #0
+    movge r3, #15
+
+   
+
+    // Wert mit dem Register verodern ?????
+    orr r0, r0, r3
+
+
+
+    // Solange Datenmenge > 0
+    subs r1, r1, #1
+    bne while
+
+
+
 
 
 stop:
