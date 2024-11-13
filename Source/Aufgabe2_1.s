@@ -3,7 +3,7 @@
  *
  * SoSe 2024
  *
- *  Created on: <10.11.2024>
+ *  Created on: <13.11.2024>
  *      Author: <Rudi Peusquens>
  *
  *	Aufgabe : 64 Bit Addition
@@ -46,25 +46,32 @@ main:
 
     ldr r0, =BREAKFAST_bm
 
+
     
     ldr r1, =BREAKFAST_bm
     orr r1, r1, #NUTS_bm
 
     
+
     ldr r2, =BREAKFAST_bm
     bic r2, r2, #MILK_bm
     orr r2, r2, #VINE_bm
 
     
+
     ldr r3, =FRUITS_bm
     orr r3, r3, #MILK_bm
     orr r3, r3, #(MILK_bm << 16)
 
+
     
     ldr r4, =BREAKFAST_bm
-    // bic r4, r4, #(BUTTER_bm | MILK_bm)
-    bic r4, r4, #BUTTER_bm 
-    bic r4, r4, #MILK_bm
+    //bic r4, r4, #BUTTER_bm 
+    //bic r4, r4, #MILK_bm
+
+    ldr r5, =(BUTTER_bm | MILK_bm)
+    bic r4, r4, r5
+
     orr r4, r4, #TEA_bm
 
 

@@ -3,7 +3,7 @@
  *
  * SoSe 2024
  *
- *  Created on: <10.11.2024>
+ *  Created on: <13.11.2024>
  *      Author: <Rudi Peusquens>
  *
  *	Aufgabe : Multiplikation
@@ -14,12 +14,13 @@
 main:
 
 //Eingabe
-mov r0, #~0   
+mov r0, #~0
+//mov r0, #10
+ 
 //Faktor
 mov r1, #2
 //Ergebniss
 mov r2, #0
-
 //Ueberlauf
 mov r9, #0 
 
@@ -39,7 +40,7 @@ beq stop
 cmp r1,#0
 beq stop
 
-//einziger Unterschied, Eingabe und Faktor müssen vorher gecheckt werden
+//do while: precheck for 0
 //bne = while
 do_while:
 adds r2, r0

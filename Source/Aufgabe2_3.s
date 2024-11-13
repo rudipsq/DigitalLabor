@@ -3,7 +3,7 @@
  *
  * SoSe 2024
  *
- *  Created on: <10.11.2024>
+ *  Created on: <13.11.2024>
  *      Author: <Rudi Peusquens>
  *
  *	Aufgabe : Werte Binarisieren
@@ -26,12 +26,12 @@ numbers:
 main:
 
 
-mov r0, #0 //Ausgaberegister
-mov r1, #8 // Datenmenge
-ldr r2,=numbers // Datenzeiger
+mov r0, #0 // OUtput
+mov r1, #8 // values
+ldr r2,=numbers // pointer
 
 while:
-    // Register nach links (um ein Nibble) verschieben
+    // Register nach links 4 bit verschieben
     mov r0, r0, lsl#4
     
     // Wert aus dem Speicher laden, Datenzeiger auf die nächste Adresse verschieben
