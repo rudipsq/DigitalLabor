@@ -37,7 +37,7 @@ while:
     // Wert aus dem Speicher laden, Datenzeiger auf die nächste Adresse verschieben
     ldr r3, [r2], #4
 
-    // Wert < Stufenwert
+    // Wert < Stufenwert 10
     cmp r3, #10
     movlt r3, #0
     movge r3, #15
