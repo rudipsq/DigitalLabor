@@ -31,25 +31,23 @@ mov r1, #8 // values
 ldr r2,=numbers // pointer
 
 while:
-    // Register nach links 4 bit verschieben
+    // shift left 4 bit
     mov r0, r0, lsl#4
     
-    // Wert aus dem Speicher laden, Datenzeiger auf die nächste Adresse verschieben
+    // load value, increment pointer
     ldr r3, [r2], #4
 
-    // Wert < Stufenwert 10
+    // value < 10
     cmp r3, #10
     movlt r3, #0
     movge r3, #15
 
    
-
-    // Wert mit dem Register verodern ?????
     orr r0, r0, r3
 
 
 
-    // Solange Datenmenge > 0
+    // while values > 0
     subs r1, r1, #1
     bne while
 

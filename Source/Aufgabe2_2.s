@@ -14,8 +14,8 @@
 main:
 
 //Eingabe
-mov r0, #~0
-//mov r0, #10
+//mov r0, #~0
+mov r0, #10
  
 //Faktor
 mov r1, #2
